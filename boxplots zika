@@ -1,0 +1,130 @@
+df <- read.csv("ZIKVexp_zika.csv", header=T)
+df
+
+> df
+   ï..Sample    Gene CZS Cephalic_Alt Eye_alt Infect_trim PCRPlacenta ZIKVCount StromaeInfl DeciduaInfl
+1         94   IFIT1   N            N       N           2           N        NA           P           P
+2         94  IFNL1R   N            N       N           2           N        NA           P           P
+3         94  IL10RB   N            N       N           2           N        NA           P           P
+4         94    PI3K   N            N       N           2           N        NA           P           P
+5         94   RIPK2   N            N       N           2           N        NA           P           P
+6         94   STAT5   N            N       N           2           N        NA           P           P
+7         94    OAS2   N            N       N           2           N        NA           P           P
+8         94   IFIH1   N            N       N           2           N        NA           P           P
+9         94   SOCS3   N            N       N           2           N        NA           P           P
+10        94  TNFSF9   N            N       N           2           N        NA           P           P
+11        94 TNFSF15   N            N       N           2           N        NA           P           P
+12        94    IRF7   N            N       N           2           N        NA           P           P
+13        94   STAT2   N            N       N           2           N        NA           P           P
+14        94     NOS   N            N       N           2           N        NA           P           P
+15        94   NRLP3   N            N       N           2           N        NA           P           P
+16        94   IL23R   N            N       N           2           N        NA           P           P
+17        94    TBFb   N            N       N           2           N        NA           P           P
+18        94    CCR5   N            N       N           2           N        NA           P           P
+19        94     IL9   N            N       N           2           N        NA           P           P
+20        94   TYRO3   N            N       N           2           N        NA           P           P
+21        94  MIP1B    N            N       N           2           N        NA           P           P
+22        94   IFI27   N            N       N           2           N        NA           P           P
+23        94   IFNL4   N            N       N           2           N        NA           P           P
+24        94   IFNL3   N            N       N           2           N        NA           P           P
+25        94    NOD2   N            N       N           2           N        NA           P           P
+26        94    VEGF   N            N       N           2           N        NA           P           P
+27        94   MARCO   N            N       N           2           N        NA           P           P
+28        94   IFNL3   N            N       N           2           N        NA           P           P
+29        94   TYRO3   N            N       N           2           N        NA           P           P
+30        94    IFI6   N            N       N           2           N        NA           P           P
+31        94    TLR8   N            N       N           2           N        NA           P           P
+32        94    OAS1   N            N       N           2           N        NA           P           P
+33        94     IL2   N            N       N           2           N        NA           P           P
+34        94   CASP5   N            N       N           2           N        NA           P           P
+35        94     IL6   N            N       N           2           N        NA           P           P
+36        94   IFIT5   N            N       N           2           N        NA           P           P
+37        94    CCL7   N            N       N           2           N        NA           P           P
+38        94   IFNA1   N            N       N           2           N        NA           P           P
+   Age Age_40 DeciduaORStromaeInfl rs12779860_b LogCpNormData rs8099917_b rs8109886_b rs4803222_b
+1   32    <40                    P            C  0.0000203522          NC           C           C
+2   32    <40                    P            C            NA          NC           C           C
+3   32    <40                    P            C  0.0131308140          NC           C           C
+4   32    <40                    P            C  0.0001120530          NC           C           C
+5   32    <40                    P            C            NA          NC           C           C
+6   32    <40                    P            C  0.3568054340          NC           C           C
+7   32    <40                    P            C            NA          NC           C           C
+8   32    <40                    P            C            NA          NC           C           C
+9   32    <40                    P            C            NA          NC           C           C
+10  32    <40                    P            C            NA          NC           C           C
+11  32    <40                    P            C            NA          NC           C           C
+12  32    <40                    P            C  0.2254245030          NC           C           C
+13  32    <40                    P            C            NA          NC           C           C
+14  32    <40                    P            C            NA          NC           C           C
+15  32    <40                    P            C            NA          NC           C           C
+16  32    <40                    P            C            NA          NC           C           C
+17  32    <40                    P            C  0.1957082960          NC           C           C
+18  32    <40                    P            C  0.1933919700          NC           C           C
+19  32    <40                    P            C            NA          NC           C           C
+20  32    <40                    P            C  0.0047903440          NC           C           C
+21  32    <40                    P            C  0.2004338800          NC           C           C
+22  32    <40                    P            C            NA          NC           C           C
+23  32    <40                    P            C  0.2209866070          NC           C           C
+24  32    <40                    P            C  0.1967694390          NC           C           C
+25  32    <40                    P            C            NA          NC           C           C
+26  32    <40                    P            C            NA          NC           C           C
+27  32    <40                    P            C            NA          NC           C           C
+28  32    <40                    P            C  0.1967694390          NC           C           C
+29  32    <40                    P            C  0.0047903440          NC           C           C
+30  32    <40                    P            C            NA          NC           C           C
+31  32    <40                    P            C            NA          NC           C           C
+32  32    <40                    P            C            NA          NC           C           C
+33  32    <40                    P            C            NA          NC           C           C
+34  32    <40                    P            C            NA          NC           C           C
+35  32    <40                    P            C            NA          NC           C           C
+36  32    <40                    P            C  0.1912817860          NC           C           C
+37  32    <40                    P            C            NA          NC           C           C
+38  32    <40                    P            C  0.2209831630          NC           C           C
+   rs2257167_b rs2843710_b rs12779860_m rs8099917_m rs8109886_m rs4803222_m rs2257167_m rs2843710_m
+1                                     C          NC          NC                      NC           C
+2                                     C          NC          NC                      NC           C
+3                                     C          NC          NC                      NC           C
+4                                     C          NC          NC                      NC           C
+5                                     C          NC          NC                      NC           C
+6                                     C          NC          NC                      NC           C
+7                                     C          NC          NC                      NC           C
+8                                     C          NC          NC                      NC           C
+9                                     C          NC          NC                      NC           C
+10                                    C          NC          NC                      NC           C
+11                                    C          NC          NC                      NC           C
+12                                    C          NC          NC                      NC           C
+13                                    C          NC          NC                      NC           C
+14                                    C          NC          NC                      NC           C
+15                                    C          NC          NC                      NC           C
+16                                    C          NC          NC                      NC           C
+17                                    C          NC          NC                      NC           C
+18                                    C          NC          NC                      NC           C
+19                                    C          NC          NC                      NC           C
+20                                    C          NC          NC                      NC           C
+21                                    C          NC          NC                      NC           C
+22                                    C          NC          NC                      NC           C
+23                                    C          NC          NC                      NC           C
+24                                    C          NC          NC                      NC           C
+25                                    C          NC          NC                      NC           C
+26                                    C          NC          NC                      NC           C
+27                                    C          NC          NC                      NC           C
+28                                    C          NC          NC                      NC           C
+29                                    C          NC          NC                      NC           C
+30                                    C          NC          NC                      NC           C
+31                                    C          NC          NC                      NC           C
+32                                    C          NC          NC                      NC           C
+33                                    C          NC          NC                      NC           C
+34                                    C          NC          NC                      NC           C
+35                                    C          NC          NC                      NC           C
+36                                    C          NC          NC                      NC           C
+37                                    C          NC          NC                      NC           C
+38                                    C          NC          NC                      NC           C
+
+#Separando os dados para PCR
+
+infl=subset(df, df[2]== c("NRLP3","IL23R", "CCR5", "IL9", "MIP1B", "IL6"))
+infl
+
+
+
+ggplot(data = df, aes(x=df$Gene, y=df$LogCpNormData)) + geom_boxplot(aes(fill=CZS))
